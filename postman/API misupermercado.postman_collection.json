@@ -1,0 +1,1661 @@
+{
+	"info": {
+		"_postman_id": "1ab210a8-7f41-46f9-8a54-758b647fc7e3",
+		"name": "API misupermercado",
+		"description": "# 🚀 Get started here\n\nThis template guides you through CRUD operations (GET, POST, PUT, DELETE), variables, and tests.\n\n## 🔖 **How to use this template**\n\n#### **Step 1: Send requests**\n\nRESTful APIs allow you to perform CRUD operations using the POST, GET, PUT, and DELETE HTTP methods.\n\nThis collection contains each of these [request](https://learning.postman.com/docs/sending-requests/requests/) types. Open each request and click \"Send\" to see what happens.\n\n#### **Step 2: View responses**\n\nObserve the response tab for status code (200 OK), response time, and size.\n\n#### **Step 3: Send new Body data**\n\nUpdate or add new data in \"Body\" in the POST request. Typically, Body data is also used in PUT request.\n\n```\n{\n    \"name\": \"Add your name in the body\"\n}\n\n ```\n\n#### **Step 4: Update the variable**\n\nVariables enable you to store and reuse values in Postman. We have created a [variable](https://learning.postman.com/docs/sending-requests/variables/) called `base_url` with the sample request [https://postman-api-learner.glitch.me](https://postman-api-learner.glitch.me). Replace it with your API endpoint to customize this collection.\n\n#### **Step 5: Add tests in the \"Scripts\" tab**\n\nAdding tests to your requests can help you confirm that your API is working as expected. You can write test scripts in JavaScript and view the output in the \"Test Results\" tab.\n\n<img src=\"https://content.pstmn.io/fa30ea0a-373d-4545-a668-e7b283cca343/aW1hZ2UucG5n\" alt=\"\" height=\"1530\" width=\"2162\">\n\n## 💪 Pro tips\n\n- Use folders to group related requests and organize the collection.\n    \n- Add more [scripts](https://learning.postman.com/docs/writing-scripts/intro-to-scripts/) to verify if the API works as expected and execute workflows.\n    \n\n## 💡Related templates\n\n[API testing basics](https://go.postman.co/redirect/workspace?type=personal&collectionTemplateId=e9a37a28-055b-49cd-8c7e-97494a21eb54&sourceTemplateId=ddb19591-3097-41cf-82af-c84273e56719)  \n[API documentation](https://go.postman.co/redirect/workspace?type=personal&collectionTemplateId=e9c28f47-1253-44af-a2f3-20dce4da1f18&sourceTemplateId=ddb19591-3097-41cf-82af-c84273e56719)  \n[Authorization methods](https://go.postman.co/redirect/workspace?type=personal&collectionTemplateId=31a9a6ed-4cdf-4ced-984c-d12c9aec1c27&sourceTemplateId=ddb19591-3097-41cf-82af-c84273e56719)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37548194"
+	},
+	"item": [
+		{
+			"name": "Api Clientes",
+			"item": [
+				{
+					"name": "clientes (GET)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{dominio}}/api/clientes",
+							"host": [
+								"{{dominio}}"
+							],
+							"path": [
+								"api",
+								"clientes"
+							]
+						},
+						"description": "This is a GET request and it is used to \"get\" data from an endpoint. There is no request body for a GET request, but you can use query parameters to help specify the resource you want data on (e.g., in this request, we have `id=1`).\n\nA successful GET response will have a `200 OK` status, and should include some kind of response body - for example, HTML web content or JSON data."
+					},
+					"response": [
+						{
+							"name": "clientes  (GET)",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{dominio}}/api//clientes",
+									"host": [
+										"{{dominio}}"
+									],
+									"path": [
+										"api",
+										"",
+										"clientes"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 12 Aug 2024 00:24:35 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id_cliente\": 5,\n        \"apellidoNombre\": \"juliana\",\n        \"dni\": \"2222\",\n        \"fechaNacimiento\": \"2024-02-03T03:00:00.000+00:00\",\n        \"correoElectronico\": \"ccccc\",\n        \"contrasena\": \"000\"\n    },\n    {\n        \"id_cliente\": 6,\n        \"apellidoNombre\": \"natalia\",\n        \"dni\": \"55555\",\n        \"fechaNacimiento\": \"2024-02-03T03:00:00.000+00:00\",\n        \"correoElectronico\": \"ccccc\",\n        \"contrasena\": \"000\"\n    },\n    {\n        \"id_cliente\": 10,\n        \"apellidoNombre\": \"pablo\",\n        \"dni\": \"55555\",\n        \"fechaNacimiento\": \"2024-02-03T03:00:00.000+00:00\",\n        \"correoElectronico\": \"ccccc\",\n        \"contrasena\": \"000\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Por ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{dominio}}/api/clientes/6",
+							"host": [
+								"{{dominio}}"
+							],
+							"path": [
+								"api",
+								"clientes",
+								"6"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{dominio}}/api/clientes/6",
+									"host": [
+										"{{dominio}}"
+									],
+									"path": [
+										"api",
+										"clientes",
+										"6"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 16 Aug 2024 02:12:15 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id_cliente\": 6,\n    \"apellidoNombre\": \"Norman Jacobi III\",\n    \"dni\": \"000\",\n    \"fechaNacimiento\": \"1990-01-01T00:00:00.000+00:00\",\n    \"correoElectronico\": \"Jewell7@yahoo.com\",\n    \"contrasena\": \"qC6J6Qxg0PND4pC\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Por Nombre",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{dominio}}/api/clientes/buscarPorNombre/Leo",
+							"host": [
+								"{{dominio}}"
+							],
+							"path": [
+								"api",
+								"clientes",
+								"buscarPorNombre",
+								"Leo"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{dominio}}/api/clientes/buscarPorNombre/Leo",
+									"host": [
+										"{{dominio}}"
+									],
+									"path": [
+										"api",
+										"clientes",
+										"buscarPorNombre",
+										"Leo"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 16 Aug 2024 02:13:20 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id_cliente\": 110,\n        \"apellidoNombre\": \"leo\",\n        \"dni\": \"666\",\n        \"fechaNacimiento\": \"2024-07-29T00:00:00.000+00:00\",\n        \"correoElectronico\": \"jjj@gmail.com\",\n        \"contrasena\": \"cvvvv\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "clientes (POST)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Successful POST request\", function () {",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 201]);",
+									"});",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n        \"apellidoNombre\": \"{{$randomFullName}}\",\n        \"dni\": \"000\",\n        \"fechaNacimiento\": \"1990-01-01\",\n        \"correoElectronico\": \"{{$randomEmail}}\",\n        \"contrasena\": \"{{$randomPassword}}\"\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{dominio}}/api/clientes",
+							"host": [
+								"{{dominio}}"
+							],
+							"path": [
+								"api",
+								"clientes"
+							]
+						},
+						"description": "This is a POST request, submitting data to an API via the request body. This request submits JSON data, and the data is reflected in the response.\n\nA successful POST request typically returns a `200 OK` or `201 Created` response code."
+					},
+					"response": [
+						{
+							"name": "clientes (POST)",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n        \"apellidoNombre\": \"{{$randomFullName}}\",\n        \"dni\": \"{{$randomInt}}\",\n        \"fechaNacimiento\": \"1990-01-01\",\n        \"correoElectronico\": \"{{$randomEmail}}\",\n        \"contrasena\": \"{{$randomPassword}}\"\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{dominio}}//api/clientes",
+									"host": [
+										"{{dominio}}"
+									],
+									"path": [
+										"",
+										"api",
+										"clientes"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 12 Aug 2024 02:43:16 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id_cliente\": 25,\n    \"apellidoNombre\": \"Mathew Goyette Jr.\",\n    \"dni\": \"921\",\n    \"fechaNacimiento\": \"1990-01-01T00:00:00.000+00:00\",\n    \"correoElectronico\": \"Heloise_Brown@gmail.com\",\n    \"contrasena\": \"Bnn0OmgvAc35v6b\"\n}"
+						}
+					]
+				},
+				{
+					"name": "clientes  (PUT)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Successful PUT request\", function () {",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 201, 204]);",
+									"});",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n        \"id_cliente\": 5,\n        \"apellidoNombre\": \"Martin\",\n        \"dni\": \"9999\",\n        \"fechaNacimiento\": \"2024-02-03T03:00:00.000+00:00\",\n        \"correoElectronico\": \"ccccc\",\n        \"contrasena\": \"321\"\n    },",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{dominio}}/api/clientes/5",
+							"host": [
+								"{{dominio}}"
+							],
+							"path": [
+								"api",
+								"clientes",
+								"5"
+							]
+						},
+						"description": "This is a PUT request and it is used to overwrite an existing piece of data. For instance, after you create an entity with a POST request, you may want to modify that later. You can do that using a PUT request. You typically identify the entity being updated by including an identifier in the URL (eg. `id=1`).\n\nA successful PUT request typically returns a `200 OK`, `201 Created`, or `204 No Content` response code."
+					},
+					"response": [
+						{
+							"name": "clientes  (PUT)",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n        \"id_cliente\": 5,\n        \"apellidoNombre\": \"Martin\",\n        \"dni\": \"9999\",\n        \"fechaNacimiento\": \"2024-02-03T03:00:00.000+00:00\",\n        \"correoElectronico\": \"ccccc\",\n        \"contrasena\": \"321\"\n    },",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{dominio}}/api/clientes/5",
+									"host": [
+										"{{dominio}}"
+									],
+									"path": [
+										"api",
+										"clientes",
+										"5"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 12 Aug 2024 00:30:04 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id_cliente\": 5,\n    \"apellidoNombre\": \"Martin\",\n    \"dni\": \"9999\",\n    \"fechaNacimiento\": \"2024-02-03T03:00:00.000+00:00\",\n    \"correoElectronico\": \"ccccc\",\n    \"contrasena\": \"321\"\n}"
+						}
+					]
+				},
+				{
+					"name": "clientes  (DELETE)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Successful DELETE request\", function () {",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 202, 204]);",
+									"});",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{dominio}}/api/clientes/10",
+							"host": [
+								"{{dominio}}"
+							],
+							"path": [
+								"api",
+								"clientes",
+								"10"
+							]
+						},
+						"description": "This is a DELETE request, and it is used to delete data that was previously created via a POST request. You typically identify the entity being updated by including an identifier in the URL (eg. `id=1`).\n\nA successful DELETE request typically returns a `200 OK`, `202 Accepted`, or `204 No Content` response code."
+					},
+					"response": [
+						{
+							"name": "clientes (DELETE)",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{dominio}}/clientes/10",
+									"host": [
+										"{{dominio}}"
+									],
+									"path": [
+										"clientes",
+										"10"
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 12 Aug 2024 00:31:07 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": null
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "API Productos",
+			"item": [
+				{
+					"name": "productos (GET)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{dominio}}/api/productos",
+							"host": [
+								"{{dominio}}"
+							],
+							"path": [
+								"api",
+								"productos"
+							]
+						},
+						"description": "This is a GET request and it is used to \"get\" data from an endpoint. There is no request body for a GET request, but you can use query parameters to help specify the resource you want data on (e.g., in this request, we have `id=1`).\n\nA successful GET response will have a `200 OK` status, and should include some kind of response body - for example, HTML web content or JSON data."
+					},
+					"response": [
+						{
+							"name": "productos (GET)",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{dominio}}/api/productos",
+									"host": [
+										"{{dominio}}"
+									],
+									"path": [
+										"api",
+										"productos"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 12 Aug 2024 00:47:15 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id_producto\": 2,\n        \"producto\": \"mouse\",\n        \"precio\": 5698.1\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "productos (POST)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Successful POST request\", function () {",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 201]);",
+									"});",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n        \"producto\": \"{{$randomProductName}}\",\n        \"precio\": {{$randomPrice}}\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{dominio}}/api/productos",
+							"host": [
+								"{{dominio}}"
+							],
+							"path": [
+								"api",
+								"productos"
+							]
+						},
+						"description": "This is a POST request, submitting data to an API via the request body. This request submits JSON data, and the data is reflected in the response.\n\nA successful POST request typically returns a `200 OK` or `201 Created` response code."
+					},
+					"response": [
+						{
+							"name": "productos (POST)",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n        \"id_producto\": 1,\n        \"producto\": \"teclado\",\n        \"precio\": 25030.3\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{dominio}}/api/productos",
+									"host": [
+										"{{dominio}}"
+									],
+									"path": [
+										"api",
+										"productos"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 12 Aug 2024 00:49:11 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id_producto\": 1,\n    \"producto\": \"teclado\",\n    \"precio\": 25030.3\n}"
+						}
+					]
+				},
+				{
+					"name": "productos (PUT)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Successful PUT request\", function () {",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 201, 204]);",
+									"});",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n        \"id_producto\": 1,\n        \"producto\": \"teclado inalambrico\",\n        \"precio\": 35030.3\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{dominio}}/api/productos/1",
+							"host": [
+								"{{dominio}}"
+							],
+							"path": [
+								"api",
+								"productos",
+								"1"
+							]
+						},
+						"description": "This is a PUT request and it is used to overwrite an existing piece of data. For instance, after you create an entity with a POST request, you may want to modify that later. You can do that using a PUT request. You typically identify the entity being updated by including an identifier in the URL (eg. `id=1`).\n\nA successful PUT request typically returns a `200 OK`, `201 Created`, or `204 No Content` response code."
+					},
+					"response": [
+						{
+							"name": "productos (PUT)",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n        \"id_producto\": 1,\n        \"producto\": \"teclado inalambrico\",\n        \"precio\": 35030.3\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{dominio}}/api/productos/1",
+									"host": [
+										"{{dominio}}"
+									],
+									"path": [
+										"api",
+										"productos",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 12 Aug 2024 00:50:09 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id_producto\": 1,\n    \"producto\": \"teclado inalambrico\",\n    \"precio\": 35030.3\n}"
+						}
+					]
+				},
+				{
+					"name": "productos (DELETE)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Successful DELETE request\", function () {",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 202, 204]);",
+									"});",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{dominio}}/api/productos/2",
+							"host": [
+								"{{dominio}}"
+							],
+							"path": [
+								"api",
+								"productos",
+								"2"
+							]
+						},
+						"description": "This is a DELETE request, and it is used to delete data that was previously created via a POST request. You typically identify the entity being updated by including an identifier in the URL (eg. `id=1`).\n\nA successful DELETE request typically returns a `200 OK`, `202 Accepted`, or `204 No Content` response code."
+					},
+					"response": [
+						{
+							"name": "productos (DELETE)",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{dominio}}/productos/2",
+									"host": [
+										"{{dominio}}"
+									],
+									"path": [
+										"productos",
+										"2"
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 12 Aug 2024 00:51:56 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": null
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Api OrdenCompra",
+			"item": [
+				{
+					"name": "New Request",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{dominio}}/api/ordenes-compra",
+							"host": [
+								"{{dominio}}"
+							],
+							"path": [
+								"api",
+								"ordenes-compra"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{dominio}}/api/ordenes-compra",
+									"host": [
+										"{{dominio}}"
+									],
+									"path": [
+										"api",
+										"ordenes-compra"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 15 Aug 2024 11:26:21 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id_orden\": 1,\n        \"fecha\": \"2024-08-14T03:00:00.000+00:00\",\n        \"cliente\": {\n            \"id_cliente\": 3,\n            \"apellidoNombre\": \"Kristopher Morar\",\n            \"dni\": \"000\",\n            \"fechaNacimiento\": \"1990-01-01T00:00:00.000+00:00\",\n            \"correoElectronico\": \"Johathan_Satterfield51@gmail.com\",\n            \"contrasena\": \"p4jdvgcMXb_HKGN\"\n        },\n        \"importe\": 1500.5,\n        \"domicilioEntrega\": \"Calle Falsa 123, Buenos Aires\",\n        \"horaEntrega\": \"10:30 AM\"\n    },\n    {\n        \"id_orden\": 2,\n        \"fecha\": \"2024-08-15T03:00:00.000+00:00\",\n        \"cliente\": {\n            \"id_cliente\": 2,\n            \"apellidoNombre\": \"Jasmine Huel\",\n            \"dni\": \"000\",\n            \"fechaNacimiento\": \"1990-01-01T00:00:00.000+00:00\",\n            \"correoElectronico\": \"Rosendo.Metz@gmail.com\",\n            \"contrasena\": \"CtV7W8Chl45wseb\"\n        },\n        \"importe\": 2500.75,\n        \"domicilioEntrega\": \"Avenida Siempre Viva 742, Córdoba\",\n        \"horaEntrega\": \"12:00 PM\"\n    },\n    {\n        \"id_orden\": 3,\n        \"fecha\": \"2024-08-16T03:00:00.000+00:00\",\n        \"cliente\": {\n            \"id_cliente\": 3,\n            \"apellidoNombre\": \"Kristopher Morar\",\n            \"dni\": \"000\",\n            \"fechaNacimiento\": \"1990-01-01T00:00:00.000+00:00\",\n            \"correoElectronico\": \"Johathan_Satterfield51@gmail.com\",\n            \"contrasena\": \"p4jdvgcMXb_HKGN\"\n        },\n        \"importe\": 3200.2,\n        \"domicilioEntrega\": \"Calle Real 456, Mendoza\",\n        \"horaEntrega\": \"02:30 PM\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"id_orden\": 14,\r\n        \"fecha\": \"2024-08-14T03:00:00.000+00:00\",\r\n        \"cliente\": {\r\n            \"id_cliente\": 6,\r\n            \"apellidoNombre\": \"Kristopher Morar\",\r\n            \"dni\": \"000\",\r\n            \"fechaNacimiento\": \"1990-01-01T00:00:00.000+00:00\",\r\n            \"correoElectronico\": \"Johathan_Satterfield51@gmail.com\",\r\n            \"contrasena\": \"p4jdvgcMXb_HKGN\"\r\n        },\r\n        \"importe\": 1500.5,\r\n        \"domicilioEntrega\": \"Calle Falsa 123, Buenos Aires\",\r\n        \"horaEntrega\": \"10:30 AM\"\r\n    },",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{dominio}}/api/ordenes-compra",
+							"host": [
+								"{{dominio}}"
+							],
+							"path": [
+								"api",
+								"ordenes-compra"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n        \"id_orden\": 14,\r\n        \"fecha\": \"2024-08-14T03:00:00.000+00:00\",\r\n        \"cliente\": {\r\n            \"id_cliente\": 6,\r\n            \"apellidoNombre\": \"Kristopher Morar\",\r\n            \"dni\": \"000\",\r\n            \"fechaNacimiento\": \"1990-01-01T00:00:00.000+00:00\",\r\n            \"correoElectronico\": \"Johathan_Satterfield51@gmail.com\",\r\n            \"contrasena\": \"p4jdvgcMXb_HKGN\"\r\n        },\r\n        \"importe\": 1500.5,\r\n        \"domicilioEntrega\": \"Calle Falsa 123, Buenos Aires\",\r\n        \"horaEntrega\": \"10:30 AM\"\r\n    },",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{dominio}}/api/ordenes-compra",
+									"host": [
+										"{{dominio}}"
+									],
+									"path": [
+										"api",
+										"ordenes-compra"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 15 Aug 2024 11:28:12 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id_orden\": 14,\n    \"fecha\": \"2024-08-14T03:00:00.000+00:00\",\n    \"cliente\": {\n        \"id_cliente\": 6,\n        \"apellidoNombre\": \"Norman Jacobi III\",\n        \"dni\": \"000\",\n        \"fechaNacimiento\": \"1990-01-01T00:00:00.000+00:00\",\n        \"correoElectronico\": \"Jewell7@yahoo.com\",\n        \"contrasena\": \"qC6J6Qxg0PND4pC\"\n    },\n    \"importe\": 1500.5,\n    \"domicilioEntrega\": \"Calle Falsa 123, Buenos Aires\",\n    \"horaEntrega\": \"10:30 AM\"\n}"
+						}
+					]
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"id_orden\": 15,\r\n        \"fecha\": \"2024-08-14T03:00:00.000+00:00\",\r\n        \"cliente\": {\r\n            \"id_cliente\": 6,\r\n            \"apellidoNombre\": \"Kristopher Morar\",\r\n            \"dni\": \"000\",\r\n            \"fechaNacimiento\": \"1990-01-01T00:00:00.000+00:00\",\r\n            \"correoElectronico\": \"Johathan_Satterfield51@gmail.com\",\r\n            \"contrasena\": \"p4jdvgcMXb_HKGN\"\r\n        },\r\n        \"importe\": 800.5,\r\n        \"domicilioEntrega\": \"Calle Falsa 123, Buenos Aires\",\r\n        \"horaEntrega\": \"10:30 AM\"\r\n    },",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{dominio}}/api/ordenes-compra/1",
+							"host": [
+								"{{dominio}}"
+							],
+							"path": [
+								"api",
+								"ordenes-compra",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n        \"id_orden\": 15,\r\n        \"fecha\": \"2024-08-14T03:00:00.000+00:00\",\r\n        \"cliente\": {\r\n            \"id_cliente\": 6,\r\n            \"apellidoNombre\": \"Kristopher Morar\",\r\n            \"dni\": \"000\",\r\n            \"fechaNacimiento\": \"1990-01-01T00:00:00.000+00:00\",\r\n            \"correoElectronico\": \"Johathan_Satterfield51@gmail.com\",\r\n            \"contrasena\": \"p4jdvgcMXb_HKGN\"\r\n        },\r\n        \"importe\": 800.5,\r\n        \"domicilioEntrega\": \"Calle Falsa 123, Buenos Aires\",\r\n        \"horaEntrega\": \"10:30 AM\"\r\n    },",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{dominio}}/api/ordenes-compra/1",
+									"host": [
+										"{{dominio}}"
+									],
+									"path": [
+										"api",
+										"ordenes-compra",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 15 Aug 2024 11:29:57 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id_orden\": 1,\n    \"fecha\": \"2024-08-14T03:00:00.000+00:00\",\n    \"cliente\": {\n        \"id_cliente\": 6,\n        \"apellidoNombre\": \"Norman Jacobi III\",\n        \"dni\": \"000\",\n        \"fechaNacimiento\": \"1990-01-01T00:00:00.000+00:00\",\n        \"correoElectronico\": \"Jewell7@yahoo.com\",\n        \"contrasena\": \"qC6J6Qxg0PND4pC\"\n    },\n    \"importe\": 800.5,\n    \"domicilioEntrega\": \"Calle Falsa 123, Buenos Aires\",\n    \"horaEntrega\": \"10:30 AM\"\n}"
+						}
+					]
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{dominio}}/api/ordenes-compra/6",
+							"host": [
+								"{{dominio}}"
+							],
+							"path": [
+								"api",
+								"ordenes-compra",
+								"6"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{dominio}}/api/ordenes-compra/6",
+									"host": [
+										"{{dominio}}"
+									],
+									"path": [
+										"api",
+										"ordenes-compra",
+										"6"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "Content-Length",
+									"value": "0"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 15 Aug 2024 11:30:52 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": null
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Api DetalleCompra",
+			"item": [
+				{
+					"name": "New Request",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{dominio}}/api/detalles-compra",
+							"host": [
+								"{{dominio}}"
+							],
+							"path": [
+								"api",
+								"detalles-compra"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{dominio}}/api/detalles-compra",
+									"host": [
+										"{{dominio}}"
+									],
+									"path": [
+										"api",
+										"detalles-compra"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 15 Aug 2024 11:32:00 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id_detalle\": 1,\n        \"orden\": {\n            \"id_orden\": 1,\n            \"fecha\": \"2024-08-14T03:00:00.000+00:00\",\n            \"cliente\": {\n                \"id_cliente\": 6,\n                \"apellidoNombre\": \"Norman Jacobi III\",\n                \"dni\": \"000\",\n                \"fechaNacimiento\": \"1990-01-01T00:00:00.000+00:00\",\n                \"correoElectronico\": \"Jewell7@yahoo.com\",\n                \"contrasena\": \"qC6J6Qxg0PND4pC\"\n            },\n            \"importe\": 800.5,\n            \"domicilioEntrega\": \"Calle Falsa 123, Buenos Aires\",\n            \"horaEntrega\": \"10:30 AM\"\n        },\n        \"producto\": {\n            \"id_producto\": 2,\n            \"producto\": \"Incredible Frozen Bacon\",\n            \"precio\": 158.19\n        },\n        \"precio\": 100,\n        \"cantidadPedida\": 3,\n        \"importe\": 300\n    },\n    {\n        \"id_detalle\": 2,\n        \"orden\": {\n            \"id_orden\": 2,\n            \"fecha\": \"2024-08-15T03:00:00.000+00:00\",\n            \"cliente\": {\n                \"id_cliente\": 2,\n                \"apellidoNombre\": \"Jasmine Huel\",\n                \"dni\": \"000\",\n                \"fechaNacimiento\": \"1990-01-01T00:00:00.000+00:00\",\n                \"correoElectronico\": \"Rosendo.Metz@gmail.com\",\n                \"contrasena\": \"CtV7W8Chl45wseb\"\n            },\n            \"importe\": 2500.75,\n            \"domicilioEntrega\": \"Avenida Siempre Viva 742, Córdoba\",\n            \"horaEntrega\": \"12:00 PM\"\n        },\n        \"producto\": {\n            \"id_producto\": 3,\n            \"producto\": \"Fantastic Wooden Cheese\",\n            \"precio\": 916.4\n        },\n        \"precio\": 50,\n        \"cantidadPedida\": 5,\n        \"importe\": 250\n    },\n    {\n        \"id_detalle\": 3,\n        \"orden\": {\n            \"id_orden\": 3,\n            \"fecha\": \"2024-08-16T03:00:00.000+00:00\",\n            \"cliente\": {\n                \"id_cliente\": 3,\n                \"apellidoNombre\": \"Kristopher Morar\",\n                \"dni\": \"000\",\n                \"fechaNacimiento\": \"1990-01-01T00:00:00.000+00:00\",\n                \"correoElectronico\": \"Johathan_Satterfield51@gmail.com\",\n                \"contrasena\": \"p4jdvgcMXb_HKGN\"\n            },\n            \"importe\": 3200.2,\n            \"domicilioEntrega\": \"Calle Real 456, Mendoza\",\n            \"horaEntrega\": \"02:30 PM\"\n        },\n        \"producto\": {\n            \"id_producto\": 1,\n            \"producto\": \"teclado inalambrico\",\n            \"precio\": 35030.3\n        },\n        \"precio\": 75,\n        \"cantidadPedida\": 2,\n        \"importe\": 150\n    },\n    {\n        \"id_detalle\": 4,\n        \"orden\": {\n            \"id_orden\": 1,\n            \"fecha\": \"2024-08-14T03:00:00.000+00:00\",\n            \"cliente\": {\n                \"id_cliente\": 6,\n                \"apellidoNombre\": \"Norman Jacobi III\",\n                \"dni\": \"000\",\n                \"fechaNacimiento\": \"1990-01-01T00:00:00.000+00:00\",\n                \"correoElectronico\": \"Jewell7@yahoo.com\",\n                \"contrasena\": \"qC6J6Qxg0PND4pC\"\n            },\n            \"importe\": 800.5,\n            \"domicilioEntrega\": \"Calle Falsa 123, Buenos Aires\",\n            \"horaEntrega\": \"10:30 AM\"\n        },\n        \"producto\": {\n            \"id_producto\": 3,\n            \"producto\": \"Fantastic Wooden Cheese\",\n            \"precio\": 916.4\n        },\n        \"precio\": 100,\n        \"cantidadPedida\": 3,\n        \"importe\": 300\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n        \"id_detalle\": 1,\r\n        \"orden\": {\r\n            \"id_orden\": 1,\r\n            \"fecha\": \"2024-08-14T03:00:00.000+00:00\",\r\n            \"cliente\": {\r\n                \"id_cliente\": 6,\r\n                \"apellidoNombre\": \"Norman Jacobi III\",\r\n                \"dni\": \"000\",\r\n                \"fechaNacimiento\": \"1990-01-01T00:00:00.000+00:00\",\r\n                \"correoElectronico\": \"Jewell7@yahoo.com\",\r\n                \"contrasena\": \"qC6J6Qxg0PND4pC\"\r\n            },\r\n            \"importe\": 800.5,\r\n            \"domicilioEntrega\": \"Calle Falsa 123, Buenos Aires\",\r\n            \"horaEntrega\": \"10:30 AM\"\r\n        },\r\n        \"producto\": {\r\n            \"id_producto\": 2,\r\n            \"producto\": \"Incredible Frozen Bacon\",\r\n            \"precio\": 158.19\r\n        },\r\n        \"precio\": 100.0,\r\n        \"cantidadPedida\": 3,\r\n        \"importe\": 300.0\r\n    },\r\n    {\r\n        \"id_detalle\": 2,\r\n        \"orden\": {\r\n            \"id_orden\": 2,\r\n            \"fecha\": \"2024-08-15T03:00:00.000+00:00\",\r\n            \"cliente\": {\r\n                \"id_cliente\": 2,\r\n                \"apellidoNombre\": \"Jasmine Huel\",\r\n                \"dni\": \"000\",\r\n                \"fechaNacimiento\": \"1990-01-01T00:00:00.000+00:00\",\r\n                \"correoElectronico\": \"Rosendo.Metz@gmail.com\",\r\n                \"contrasena\": \"CtV7W8Chl45wseb\"\r\n            },\r\n            \"importe\": 2500.75,\r\n            \"domicilioEntrega\": \"Avenida Siempre Viva 742, Córdoba\",\r\n            \"horaEntrega\": \"12:00 PM\"\r\n        },\r\n        \"producto\": {\r\n            \"id_producto\": 3,\r\n            \"producto\": \"Fantastic Wooden Cheese\",\r\n            \"precio\": 916.4\r\n        },\r\n        \"precio\": 50.0,\r\n        \"cantidadPedida\": 5,\r\n        \"importe\": 250.0\r\n    },",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{dominio}}/api/detalles-compra",
+							"host": [
+								"{{dominio}}"
+							],
+							"path": [
+								"api",
+								"detalles-compra"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": " {\r\n        \"id_detalle\": 1,\r\n        \"orden\": {\r\n            \"id_orden\": 1,\r\n            \"fecha\": \"2024-08-14T03:00:00.000+00:00\",\r\n            \"cliente\": {\r\n                \"id_cliente\": 6,\r\n                \"apellidoNombre\": \"Norman Jacobi III\",\r\n                \"dni\": \"000\",\r\n                \"fechaNacimiento\": \"1990-01-01T00:00:00.000+00:00\",\r\n                \"correoElectronico\": \"Jewell7@yahoo.com\",\r\n                \"contrasena\": \"qC6J6Qxg0PND4pC\"\r\n            },\r\n            \"importe\": 800.5,\r\n            \"domicilioEntrega\": \"Calle Falsa 123, Buenos Aires\",\r\n            \"horaEntrega\": \"10:30 AM\"\r\n        },\r\n        \"producto\": {\r\n            \"id_producto\": 2,\r\n            \"producto\": \"Incredible Frozen Bacon\",\r\n            \"precio\": 158.19\r\n        },\r\n        \"precio\": 100.0,\r\n        \"cantidadPedida\": 3,\r\n        \"importe\": 300.0\r\n    },\r\n    {\r\n        \"id_detalle\": 2,\r\n        \"orden\": {\r\n            \"id_orden\": 2,\r\n            \"fecha\": \"2024-08-15T03:00:00.000+00:00\",\r\n            \"cliente\": {\r\n                \"id_cliente\": 2,\r\n                \"apellidoNombre\": \"Jasmine Huel\",\r\n                \"dni\": \"000\",\r\n                \"fechaNacimiento\": \"1990-01-01T00:00:00.000+00:00\",\r\n                \"correoElectronico\": \"Rosendo.Metz@gmail.com\",\r\n                \"contrasena\": \"CtV7W8Chl45wseb\"\r\n            },\r\n            \"importe\": 2500.75,\r\n            \"domicilioEntrega\": \"Avenida Siempre Viva 742, Córdoba\",\r\n            \"horaEntrega\": \"12:00 PM\"\r\n        },\r\n        \"producto\": {\r\n            \"id_producto\": 3,\r\n            \"producto\": \"Fantastic Wooden Cheese\",\r\n            \"precio\": 916.4\r\n        },\r\n        \"precio\": 50.0,\r\n        \"cantidadPedida\": 5,\r\n        \"importe\": 250.0\r\n    },",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{dominio}}/api/detalles-compra",
+									"host": [
+										"{{dominio}}"
+									],
+									"path": [
+										"api",
+										"detalles-compra"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 15 Aug 2024 11:34:29 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id_detalle\": 1,\n    \"orden\": {\n        \"id_orden\": 1,\n        \"fecha\": \"2024-08-14T03:00:00.000+00:00\",\n        \"cliente\": {\n            \"id_cliente\": 6,\n            \"apellidoNombre\": \"Norman Jacobi III\",\n            \"dni\": \"000\",\n            \"fechaNacimiento\": \"1990-01-01T00:00:00.000+00:00\",\n            \"correoElectronico\": \"Jewell7@yahoo.com\",\n            \"contrasena\": \"qC6J6Qxg0PND4pC\"\n        },\n        \"importe\": 800.5,\n        \"domicilioEntrega\": \"Calle Falsa 123, Buenos Aires\",\n        \"horaEntrega\": \"10:30 AM\"\n    },\n    \"producto\": {\n        \"id_producto\": 2,\n        \"producto\": \"Incredible Frozen Bacon\",\n        \"precio\": 158.19\n    },\n    \"precio\": 100,\n    \"cantidadPedida\": 3,\n    \"importe\": 300\n}"
+						}
+					]
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n        \"id_detalle\": 1,\r\n        \"orden\": {\r\n            \"id_orden\": 1,\r\n            \"fecha\": \"2024-08-14T03:00:00.000+00:00\",\r\n            \"cliente\": {\r\n                \"id_cliente\": 6,\r\n                \"apellidoNombre\": \"Norman Jacobi III\",\r\n                \"dni\": \"000\",\r\n                \"fechaNacimiento\": \"1990-01-01T00:00:00.000+00:00\",\r\n                \"correoElectronico\": \"Jewell7@yahoo.com\",\r\n                \"contrasena\": \"qC6J6Qxg0PND4pC\"\r\n            },\r\n            \"importe\": 800.5,\r\n            \"domicilioEntrega\": \"Calle Falsa 123, Buenos Aires\",\r\n            \"horaEntrega\": \"10:30 AM\"\r\n        },\r\n        \"producto\": {\r\n            \"id_producto\": 2,\r\n            \"producto\": \"Incredible Frozen Bacon\",\r\n            \"precio\": 158.19\r\n        },\r\n        \"precio\": 100.0,\r\n        \"cantidadPedida\": 3,\r\n        \"importe\": 300.0\r\n    },\r\n    {\r\n        \"id_detalle\": 2,\r\n        \"orden\": {\r\n            \"id_orden\": 2,\r\n            \"fecha\": \"2024-08-15T03:00:00.000+00:00\",\r\n            \"cliente\": {\r\n                \"id_cliente\": 2,\r\n                \"apellidoNombre\": \"Jasmine Huel\",\r\n                \"dni\": \"000\",\r\n                \"fechaNacimiento\": \"1990-01-01T00:00:00.000+00:00\",\r\n                \"correoElectronico\": \"Rosendo.Metz@gmail.com\",\r\n                \"contrasena\": \"CtV7W8Chl45wseb\"\r\n            },\r\n            \"importe\": 2500.75,\r\n            \"domicilioEntrega\": \"Avenida Siempre Viva 742, Córdoba\",\r\n            \"horaEntrega\": \"12:00 PM\"\r\n        },\r\n        \"producto\": {\r\n            \"id_producto\": 3,\r\n            \"producto\": \"Fantastic Wooden Cheese\",\r\n            \"precio\": 916.4\r\n        },\r\n        \"precio\": 300.0,\r\n        \"cantidadPedida\": 5,\r\n        \"importe\": 250.0\r\n    },",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{dominio}}/api/detalles-compra/1",
+							"host": [
+								"{{dominio}}"
+							],
+							"path": [
+								"api",
+								"detalles-compra",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": " {\r\n        \"id_detalle\": 1,\r\n        \"orden\": {\r\n            \"id_orden\": 1,\r\n            \"fecha\": \"2024-08-14T03:00:00.000+00:00\",\r\n            \"cliente\": {\r\n                \"id_cliente\": 6,\r\n                \"apellidoNombre\": \"Norman Jacobi III\",\r\n                \"dni\": \"000\",\r\n                \"fechaNacimiento\": \"1990-01-01T00:00:00.000+00:00\",\r\n                \"correoElectronico\": \"Jewell7@yahoo.com\",\r\n                \"contrasena\": \"qC6J6Qxg0PND4pC\"\r\n            },\r\n            \"importe\": 800.5,\r\n            \"domicilioEntrega\": \"Calle Falsa 123, Buenos Aires\",\r\n            \"horaEntrega\": \"10:30 AM\"\r\n        },\r\n        \"producto\": {\r\n            \"id_producto\": 2,\r\n            \"producto\": \"Incredible Frozen Bacon\",\r\n            \"precio\": 158.19\r\n        },\r\n        \"precio\": 100.0,\r\n        \"cantidadPedida\": 3,\r\n        \"importe\": 300.0\r\n    },\r\n    {\r\n        \"id_detalle\": 2,\r\n        \"orden\": {\r\n            \"id_orden\": 2,\r\n            \"fecha\": \"2024-08-15T03:00:00.000+00:00\",\r\n            \"cliente\": {\r\n                \"id_cliente\": 2,\r\n                \"apellidoNombre\": \"Jasmine Huel\",\r\n                \"dni\": \"000\",\r\n                \"fechaNacimiento\": \"1990-01-01T00:00:00.000+00:00\",\r\n                \"correoElectronico\": \"Rosendo.Metz@gmail.com\",\r\n                \"contrasena\": \"CtV7W8Chl45wseb\"\r\n            },\r\n            \"importe\": 2500.75,\r\n            \"domicilioEntrega\": \"Avenida Siempre Viva 742, Córdoba\",\r\n            \"horaEntrega\": \"12:00 PM\"\r\n        },\r\n        \"producto\": {\r\n            \"id_producto\": 3,\r\n            \"producto\": \"Fantastic Wooden Cheese\",\r\n            \"precio\": 916.4\r\n        },\r\n        \"precio\": 300.0,\r\n        \"cantidadPedida\": 5,\r\n        \"importe\": 250.0\r\n    },",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{dominio}}/api/detalles-compra/1",
+									"host": [
+										"{{dominio}}"
+									],
+									"path": [
+										"api",
+										"detalles-compra",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 15 Aug 2024 11:35:54 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id_detalle\": 1,\n    \"orden\": {\n        \"id_orden\": 1,\n        \"fecha\": \"2024-08-14T03:00:00.000+00:00\",\n        \"cliente\": {\n            \"id_cliente\": 6,\n            \"apellidoNombre\": \"Norman Jacobi III\",\n            \"dni\": \"000\",\n            \"fechaNacimiento\": \"1990-01-01T00:00:00.000+00:00\",\n            \"correoElectronico\": \"Jewell7@yahoo.com\",\n            \"contrasena\": \"qC6J6Qxg0PND4pC\"\n        },\n        \"importe\": 800.5,\n        \"domicilioEntrega\": \"Calle Falsa 123, Buenos Aires\",\n        \"horaEntrega\": \"10:30 AM\"\n    },\n    \"producto\": {\n        \"id_producto\": 2,\n        \"producto\": \"Incredible Frozen Bacon\",\n        \"precio\": 158.19\n    },\n    \"precio\": 100,\n    \"cantidadPedida\": 3,\n    \"importe\": 300\n}"
+						}
+					]
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{dominio}}/api/detalles-compra/1",
+							"host": [
+								"{{dominio}}"
+							],
+							"path": [
+								"api",
+								"detalles-compra",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "id",
+			"value": "1"
+		},
+		{
+			"key": "base_url",
+			"value": "https://postman-rest-api-learner.glitch.me/"
+		}
+	]
+}
